@@ -1,0 +1,4 @@
+.que-main:nth-child(3) div div span{
+    left: 0 !important;
+    right: auto;
+}

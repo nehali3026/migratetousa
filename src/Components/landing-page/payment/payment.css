@@ -1,0 +1,61 @@
+.rainbow-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px; /* Equivalent to h-11 */
+    padding: 0 2rem; /* Equivalent to px-8 */
+    border: 1.28px solid transparent; /* 0.08 * 16px */
+    border-radius: 9999px; /* Fully rounded */
+    background-image: linear-gradient(#121213, #121213),
+      linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),
+      linear-gradient(90deg, #ff4d4d, #40c9ff, #ff9a9e, #f6d365, #a1c4fd);
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 200%;
+    font-family: inherit;
+    font-weight: 500;
+    color: #ffffff; /* Text color */
+    cursor: pointer;
+    transition: background-position 0.5s, color 0.3s;
+  }
+  
+  .rainbow-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #8888ff; /* Custom ring color */
+  }
+  
+  .rainbow-button:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
+  .rainbow-button::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20%;
+    background: linear-gradient(90deg, #ff4d4d, #40c9ff, #ff9a9e, #f6d365, #a1c4fd);
+    background-size: 200%;
+    filter: blur(12.8px); /* 0.8 * 16px */
+    z-index: 0;
+    animation: rainbow 3s linear infinite;
+  }
+  
+  .rainbow-button .icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 0.5rem;
+  }
+  
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }

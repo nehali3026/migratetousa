@@ -1,0 +1,26 @@
+.dashboard-input{
+    appearance: none;
+    background-color: #fff;
+    background-position: 50%;
+    background-size: 180%;
+    border: 1px solid;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 4px 0 rgba(119,122,175,.4);
+    color: #d6d6e7;
+    cursor: inherit;
+    height: 1rem;
+    margin: 0 0.5rem 0 0;
+    width: 1rem;
+}
+
+.ais-SearchBox-input {
+    border-radius : 8px !important;
+    font-size:18px !important
+}
+
+.ais-Hits-item {
+    box-shadow: none !important;
+    border: none!important;
+    padding: 0 !important;
+    display: block !important;
+}
